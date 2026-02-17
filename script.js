@@ -123,6 +123,7 @@ if (contactForm) {
         } catch (error) {
             alert("Something went wrong. Please try again.");
         } finally {
+            this.reset();
             submitButton.textContent = originalText;
             submitButton.disabled = false;
         }
