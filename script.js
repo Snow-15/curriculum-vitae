@@ -115,7 +115,7 @@ if (contactForm) {
 
             if (response.ok) {
                 alert("Success! Your message has been sent.");
-                form.reset();
+                this.reset();
             } else {
                 alert("Error: " + data.message);
             }
@@ -123,7 +123,6 @@ if (contactForm) {
         } catch (error) {
             alert("Something went wrong. Please try again.");
         } finally {
-            this.reset();
             submitButton.textContent = originalText;
             submitButton.disabled = false;
         }
