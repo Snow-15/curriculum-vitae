@@ -95,6 +95,9 @@ if (contactForm) {
             return;
         }
         
+        const formData = new FormData(contactForm);
+        formData.append("access_key", "5a044447-bd97-4444-8b65-da98d6d76dff");
+
         // Simulate form submission (replace with actual form handling)
         const submitButton = this.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
@@ -102,13 +105,27 @@ if (contactForm) {
         submitButton.textContent = 'Sending...';
         submitButton.disabled = true;
         
-        // Simulate API call
-        setTimeout(() => {
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert("Success! Your message has been sent.");
+                form.reset();
+            } else {
+                alert("Error: " + data.message);
+            }
+
+        } catch (error) {
+            alert("Something went wrong. Please try again.");
+        } finally {
             submitButton.textContent = originalText;
             submitButton.disabled = false;
-        }, 2000);
+        }
     });
 }
 
