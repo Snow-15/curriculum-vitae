@@ -77,6 +77,7 @@ if (contactForm) {
         
         // Get form data
         const formData = new FormData(this);
+        formData.append("access_key", "5a044447-bd97-4444-8b65-da98d6d76dff");
         const name = formData.get('name');
         const email = formData.get('email');
         const subject = formData.get('subject');
@@ -95,9 +96,6 @@ if (contactForm) {
             return;
         }
         
-        const formData = new FormData(contactForm);
-        formData.append("access_key", "5a044447-bd97-4444-8b65-da98d6d76dff");
-
         // Simulate form submission (replace with actual form handling)
         const submitButton = this.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
