@@ -129,8 +129,8 @@ backToTop.style.cssText = `
     bottom: 20px;
     right: 20px;
     background: transparent;
-    border: 1px solid #1e3a1e;
-    color: #555;
+    border: 1px solid #343331;
+    color: #575653;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.72rem;
     padding: 5px 12px;
@@ -153,12 +153,12 @@ window.addEventListener('scroll', () => {
 });
 
 backToTop.addEventListener('mouseenter', () => {
-    backToTop.style.borderColor = '#39d353';
-    backToTop.style.color = '#39d353';
+    backToTop.style.borderColor = '#3AA99F';
+    backToTop.style.color = '#3AA99F';
 });
 backToTop.addEventListener('mouseleave', () => {
-    backToTop.style.borderColor = '#1e3a1e';
-    backToTop.style.color = '#555';
+    backToTop.style.borderColor = '#343331';
+    backToTop.style.color = '#575653';
 });
 backToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
