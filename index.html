@@ -3,180 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erholled Chlarence T. Dueñas - CV & Portfolio</title>
+    <title>ecd@portfolio:~$</title>
     <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Erholled Chlarence T. Dueñas</h2>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#cv" class="nav-link">CV</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
 
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <!-- Terminal window chrome / top bar -->
+    <div class="terminal-chrome">
+        <div class="chrome-bar">
+            <div class="chrome-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
             </div>
+            <div class="chrome-title">ecd@portfolio: ~/home — bash</div>
+            <nav class="chrome-nav">
+                <a href="#home" class="tab-link active">~/home</a>
+                <a href="#cv" class="tab-link">~/cv</a>
+                <a href="#about" class="tab-link">~/about</a>
+                <a href="#contact" class="tab-link">~/contact</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
         </div>
-    </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" class="mobile-link">~/home</a>
+            <a href="#cv" class="mobile-link">~/cv</a>
+            <a href="#about" class="mobile-link">~/about</a>
+            <a href="#contact" class="mobile-link">~/contact</a>
+        </div>
+    </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm Erholled Chlarence T. Dueñas</h1>
-                <p class="hero-subtitle">BS Computer Science Student</p>
-                <p class="hero-description">
-                    A 4th year Computer Science student at Pampanga State University that's
-                    passionate about backend development.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#cv" class="btn btn-primary">View CV</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+    <!-- Scanlines overlay -->
+    <div class="scanlines"></div>
+
+    <!-- All sections live inside one continuous terminal body -->
+    <main class="terminal-body">
+
+        <!-- ═══════════════════════════════════════
+             HOME
+             ═══════════════════════════════════════ -->
+        <section id="home" class="term-section">
+            <div class="boot-sequence">
+                <p class="boot-line" style="--d:0.0s">Loading <span class="hl">portfolio.sh</span>...</p>
+                <p class="boot-line" style="--d:0.4s">Initializing modules         <span class="ok">[  OK  ]</span></p>
+                <p class="boot-line" style="--d:0.7s">Mounting filesystem          <span class="ok">[  OK  ]</span></p>
+                <p class="boot-line" style="--d:1.0s">Starting user session        <span class="ok">[  OK  ]</span></p>
+                <p class="boot-line blank" style="--d:1.3s">&nbsp;</p>
+            </div>
+
+            <div class="cmd-block fade-in">
+                <div class="cmd-line">
+                    <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~</span><span class="prompt-sym">$</span>&nbsp;<span class="cmd-text">whoami</span>
                 </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-photo">
-                    <img src="profile-photo.png" alt="Profile Photo" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CV Section -->
-    <section id="cv" class="cv">
-        <div class="container">
-            <h2 class="section-title">Curriculum Vitae</h2>
-            <div class="cv-image-container">
-                <img src="cv-image.jpg" alt="Erholled Chlarence T. Dueñas CV" class="cv-image" />
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a passionate Computer Science student at Pampanga State University that's focused
-                        in backend development. 
-                    </p>
-                    <p>
-                        Outside of coding my other passions are running, journaling and recently I started reading
-                        books. I love running since it helps my mind remove all the stress that has piled up.
-                        It refreshes my mind to a blank state so there's no overthinking or worrying thoughts
-                        that are hindering my mind. With journaling it helps me reflect and grow, it allows me
-                        to see the person I am today and work toward who I want to be. Reading books allow me to
-                        learn new things, for now I'm reading educational books as I'm trying to improve my
-                        English communication skills.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out!</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>ecd09150439@gmail.com</span>
+                <div class="cmd-output">
+                    <div class="hero-grid">
+                        <div class="hero-photo-col">
+                            <div class="profile-photo">
+                                <img src="profile-photo.png" alt="Erholled Chlarence T. Dueñas" />
+                                <span class="corner-bl"></span>
+                                <span class="corner-br"></span>
+                            </div>
+                            <p class="photo-caption"><span class="cmt">#</span> erholled_chlarence.jpg</p>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>(+63) 906 247 0485</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Purok 1 #20 San Pablo, Guagua, Pampanga</span>
+                        <div class="hero-info-col">
+                            <div class="info-table">
+                                <div class="info-row">
+                                    <span class="info-key">name</span>
+                                    <span class="info-sep">:</span>
+                                    <span class="info-val name-val">Erholled Chlarence T. Dueñas</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-key">role</span>
+                                    <span class="info-sep">:</span>
+                                    <span class="info-val">Backend Developer</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-key">status</span>
+                                    <span class="info-sep">:</span>
+                                    <span class="info-val green-val">● intern at dakilasoft</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-key">school</span>
+                                    <span class="info-sep">:</span>
+                                    <span class="info-val">Pampanga State University</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-key">year</span>
+                                    <span class="info-sep">:</span>
+                                    <span class="info-val">4th Year, B.S. Computer Science</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-key">focus</span>
+                                    <span class="info-sep">:</span>
+                                    <span class="info-val">APIs · Databases · Backend Systems</span>
+                                </div>
+                            </div>
+                            <div class="hero-bio">
+                                <p><span class="cmt">#</span> Passionate about building APIs, managing databases, and the satisfaction</p>
+                                <p><span class="cmt">#</span> of watching everything integrate seamlessly. Always eager to learn.</p>
+                            </div>
+                            <div class="hero-btns">
+                                <a href="#cv" class="term-btn">$ view cv</a>
+                                <a href="#contact" class="term-btn term-btn-ghost">$ contact --me</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/erholled-chlarence-dueñas" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/Snow-15" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="https://www.facebook.com/Erholled" class="social-link"><i class="fab fa-facebook-messenger"></i></a>
+                </div>
+            </div>
+
+            <div class="cmd-line idle-line">
+                <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~</span><span class="prompt-sym">$</span>&nbsp;<span class="blink-cursor">█</span>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             CV
+             ═══════════════════════════════════════ -->
+        <section id="cv" class="term-section">
+
+            <!-- cd cv -->
+            <div class="cmd-block fade-in">
+                <div class="cmd-line">
+                    <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~</span><span class="prompt-sym">$</span>&nbsp;<span class="cmd-text">cd cv</span>
+                </div>
+            </div>
+
+            <!-- skills -->
+            <div class="cmd-block fade-in">
+                <div class="cmd-line">
+                    <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~/cv</span><span class="prompt-sym">$</span>&nbsp;<span class="cmd-text">cat skills.txt</span>
+                </div>
+                <div class="cmd-output">
+                    <p class="section-rule">──── LANGUAGES ──────────────────────────────────────</p>
+                    <div class="skill-row">
+                        <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="stag-icon" alt="Python"><span>Python</span></div>
+                        <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="stag-icon" alt="JS"><span>JavaScript</span></div>
+                        <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="stag-icon" alt="PHP"><span>PHP</span></div>
+                        <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="stag-icon" alt="C++"><span>C++</span></div>
+                        <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="stag-icon" alt="HTML"><span>HTML</span></div>
+                    </div>
+                    <p class="section-rule">──── DATABASES &amp; TOOLS ────────────────────────────</p>
+                    <div class="skill-row">
+                        <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="stag-icon" alt="MongoDB"><span>MongoDB</span></div>
+                        <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="stag-icon" alt="MySQL"><span>MySQL</span></div>
+                        <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="stag-icon" alt="Git"><span>Git</span></div>
+                        <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="stag-icon github-icon" alt="GitHub"><span>GitHub</span></div>
+                        <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="stag-icon" alt="Linux"><span>Linux CLI</span></div>
+                        <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" class="stag-icon" alt="Laravel"><span>Laravel</span></div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            </div>
+
+            <!-- projects -->
+            <div class="cmd-block fade-in">
+                <div class="cmd-line">
+                    <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~/cv</span><span class="prompt-sym">$</span>&nbsp;<span class="cmd-text">ls -l projects/</span>
+                </div>
+                <div class="cmd-output">
+                    <p class="ls-total">total 2</p>
+
+                    <div class="project-block">
+                        <div class="ls-row">
+                            <span class="ls-perms">drwxr-xr-x</span>
+                            <span class="ls-date">Apr 2025 – Nov 2025</span>
+                            <span class="ls-name hl">OSIMAP/</span>
+                        </div>
+                        <div class="project-desc">
+                            <p class="cmt-line"><span class="cmt">#</span> Optimized Spatial Information Map for Accident Prevention</p>
+                            <p><span class="arrow">›</span> Web/Android app — team of 6, geospatial clustering to visualize accident hotspots</p>
+                            <p><span class="arrow">›</span> in San Fernando, Pampanga. Implemented the backend logic for both platforms.</p>
+                            <div class="tag-row">
+                                <span class="ptag">backend</span><span class="ptag">web</span><span class="ptag">android</span><span class="ptag">geospatial</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-block">
+                        <div class="ls-row">
+                            <span class="ls-perms">drwxr-xr-x</span>
+                            <span class="ls-date">Apr 2024 – Dec 2024</span>
+                            <span class="ls-name hl">MoodJournal/</span>
+                        </div>
+                        <div class="project-desc">
+                            <p class="cmt-line"><span class="cmt">#</span> Emotional Wellness Web Application</p>
+                            <p><span class="arrow">›</span> 10-person team — HTML, PHP, JavaScript, Laravel, Tailwind CSS.</p>
+                            <p><span class="arrow">›</span> Integrated insight-providing features to support self-awareness and emotional well-being.</p>
+                            <div class="tag-row">
+                                <span class="ptag">laravel</span><span class="ptag">php</span><span class="ptag">javascript</span><span class="ptag">tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- education -->
+            <div class="cmd-block fade-in">
+                <div class="cmd-line">
+                    <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~/cv</span><span class="prompt-sym">$</span>&nbsp;<span class="cmd-text">cat education.log</span>
+                </div>
+                <div class="cmd-output">
+                    <div class="edu-block">
+                        <p><span class="log-ts">[AUG 2022 – PRESENT]</span> <span class="hl">Pampanga State University</span><span class="active-badge">● active</span></p>
+                        <p class="log-i"><span class="arrow">→</span> B.S. in Computer Science</p>
+                        <p class="log-i"><span class="arrow">→</span> Consistent President's/Dean's Lister: 1st Year → 3rd Year</p>
+                        <p class="log-i"><span class="arrow">→</span> Coursework: Software Engineering · OS · Algorithms · DB Management · Web Dev · Mobile Dev</p>
+                    </div>
+                    <div class="edu-block">
+                        <p><span class="log-ts">[SEP 2025 – PRESENT]</span> <span class="hl">Boot.dev</span> <span class="active-badge">● active</span></p>
+                        <p class="log-i"><span class="arrow">→</span> Backend engineering curriculum — 4 courses &amp; projects completed</p>
+                        <p class="log-i"><span class="arrow">→</span> Python · Linux/Unix CLI · Git</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- cv image -->
+            <div class="cmd-block fade-in">
+                <div class="cmd-line">
+                    <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~/cv</span><span class="prompt-sym">$</span>&nbsp;<span class="cmd-text">open cv.pdf</span>
+                </div>
+                <div class="cmd-output">
+                    <p class="dim"><span class="cmt">#</span> Rendering cv.pdf...</p>
+                    <div class="cv-wrap">
+                        <img src="cv-image.jpg" alt="CV" class="cv-img" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="cmd-line idle-line">
+                <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~/cv</span><span class="prompt-sym">$</span>&nbsp;<span class="blink-cursor">█</span>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             ABOUT
+             ═══════════════════════════════════════ -->
+        <section id="about" class="term-section">
+
+            <div class="cmd-block fade-in">
+                <div class="cmd-line">
+                    <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~/cv</span><span class="prompt-sym">$</span>&nbsp;<span class="cmd-text">cd ../about</span>
+                </div>
+            </div>
+
+            <div class="cmd-block fade-in">
+                <div class="cmd-line">
+                    <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~/about</span><span class="prompt-sym">$</span>&nbsp;<span class="cmd-text">cat about.txt</span>
+                </div>
+                <div class="cmd-output">
+                    <p>I'm a passionate Computer Science student at Pampanga State University focused on</p>
+                    <p>backend development. I love building APIs, managing databases, and the satisfaction</p>
+                    <p>of watching everything integrate seamlessly.</p>
+                </div>
+            </div>
+
+            <div class="cmd-block fade-in">
+                <div class="cmd-line">
+                    <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~/about</span><span class="prompt-sym">$</span>&nbsp;<span class="cmd-text">cat hobbies.txt</span>
+                </div>
+                <div class="cmd-output">
+                    <p class="section-rule">──── OUTSIDE OF CODE ─────────────────────────────────</p>
+                    <div class="hobbies-grid">
+                        <div class="hobby-block">
+                            <p class="hobby-name">🏃 running</p>
+                            <p class="hobby-desc">Stress reset mechanism. Clears the mental cache and removes</p>
+                            <p class="hobby-desc">all the overthinking and worrying thoughts hindering my focus.</p>
+                        </div>
+                        <div class="hobby-block">
+                            <p class="hobby-name">📓 journaling</p>
+                            <p class="hobby-desc">Daily reflection log. Helps me see who I am today and work</p>
+                            <p class="hobby-desc">toward who I want to be.</p>
+                        </div>
+                        <div class="hobby-block">
+                            <p class="hobby-name">📚 reading</p>
+                            <p class="hobby-desc">Loading new knowledge modules. Currently working through</p>
+                            <p class="hobby-desc">educational books to improve English communication skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cmd-line idle-line">
+                <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~/about</span><span class="prompt-sym">$</span>&nbsp;<span class="blink-cursor">█</span>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             CONTACT
+             ═══════════════════════════════════════ -->
+        <section id="contact" class="term-section">
+
+            <div class="cmd-block fade-in">
+                <div class="cmd-line">
+                    <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~/about</span><span class="prompt-sym">$</span>&nbsp;<span class="cmd-text">cd ../contact</span>
+                </div>
+            </div>
+
+            <div class="cmd-block fade-in">
+                <div class="cmd-line">
+                    <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~/contact</span><span class="prompt-sym">$</span>&nbsp;<span class="cmd-text">cat contact.json</span>
+                </div>
+                <div class="cmd-output">
+                    <div class="json-out">
+                        <p><span class="jbrace">{</span></p>
+                        <p class="jl"><span class="jkey">"email"</span><span class="jcol">:</span>    <span class="jval">"ecd09150439@gmail.com"</span>,</p>
+                        <p class="jl"><span class="jkey">"phone"</span><span class="jcol">:</span>    <span class="jval">"(+63) 906 247 0485"</span>,</p>
+                        <p class="jl"><span class="jkey">"location"</span><span class="jcol">:</span> <span class="jval">"Guagua, Pampanga, Philippines"</span>,</p>
+                        <p class="jl"><span class="jkey">"github"</span><span class="jcol">:</span>   <span class="jval"><a href="https://github.com/Snow-15" class="term-link">"github.com/Snow-15"</a></span>,</p>
+                        <p class="jl"><span class="jkey">"linkedin"</span><span class="jcol">:</span> <span class="jval"><a href="https://www.linkedin.com/in/erholled-chlarence-dueñas" class="term-link">"linkedin.com/in/erholled-chlarence-dueñas"</a></span>,</p>
+                        <p class="jl"><span class="jkey">"facebook"</span><span class="jcol">:</span> <span class="jval"><a href="https://www.facebook.com/Erholled" class="term-link">"facebook.com/Erholled"</a></span></p>
+                        <p><span class="jbrace">}</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cmd-block fade-in">
+                <div class="cmd-line">
+                    <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~/contact</span><span class="prompt-sym">$</span>&nbsp;<span class="cmd-text">./send_message.sh</span>
+                </div>
+                <div class="cmd-output">
+                    <p class="dim"><span class="cmt">#</span> Interactive form — fill in all fields and press SEND.</p>
+                    <form id="contact-form" class="term-form" action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="5a044447-bd97-4444-8b65-da98d6d76dff">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                required
-                            />
+                        <div class="tfield">
+                            <span class="tfield-label">name<span class="jcol">:</span></span>
+                            <input type="text" name="name" class="tinput" placeholder="your name..." required />
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                required
-                            />
+                        <div class="tfield">
+                            <span class="tfield-label">email<span class="jcol">:</span></span>
+                            <input type="email" name="email" class="tinput" placeholder="your@email.com" required />
                         </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input
-                                type="text"
-                                id="subject"
-                                name="subject"
-                                required
-                            />
+                        <div class="tfield">
+                            <span class="tfield-label">subject<span class="jcol">:</span></span>
+                            <input type="text" name="subject" class="tinput" placeholder="subject..." required />
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                rows=5
-                                required
-                            ></textarea>
+                        <div class="tfield tfield-area">
+                            <span class="tfield-label top-label">message<span class="jcol">:</span></span>
+                            <textarea name="message" class="tinput ttextarea" rows="5" placeholder="type your message here..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="term-btn submit-btn">$ send_message --now</button>
                     </form>
+                    <p id="form-feedback" class="form-feedback"></p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Erholled Chlarence T. Dueñas. All rights reserved.</p>
-        </div>
-    </footer>
+            <div class="cmd-line idle-line">
+                <span class="prompt-user">ecd@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~/contact</span><span class="prompt-sym">$</span>&nbsp;<span class="blink-cursor">█</span>
+            </div>
+        </section>
 
-    <script src="script.js"></script>
-</body>
-</html>
+        <footer class="term-footer">
+            <p class="dim footer-rule">─────────────────────────────────────────────────────────────────────────</p>
